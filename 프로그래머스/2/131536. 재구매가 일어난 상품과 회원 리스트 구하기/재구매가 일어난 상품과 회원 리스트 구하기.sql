@@ -4,5 +4,6 @@ USER_ID,
 PRODUCT_ID
 FROM ONLINE_SALE
 GROUP BY USER_ID,PRODUCT_ID
-HAVING COUNT(*)>1
+HAVING COUNT(*)>1 
+# 내부적으로 몇번 나왔는지 기억하고있어서 바로 COUNT 함수 사용가능, 각각의 행마다 실행해줌 갯수가 몇개였는지에 대해서
 ORDER BY USER_ID ASC, PRODUCT_ID DESC
